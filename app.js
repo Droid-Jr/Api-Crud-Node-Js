@@ -5,6 +5,9 @@ const todoList = require('./utils/database');
 const lista = require("./models/todos.model");
 
 const app = Express();
+require('dotenv').config();
+
+const PORT = process.env.PORT ?? 3000
 
 lista;
 
@@ -91,6 +94,6 @@ app.get('/', (req, res) => {
     res.send("Hola des mi TodoLits");
 });
 
-app.listen(3000, () => {
-    console.log("servidor escuchando causa GAAAAA!!");
+app.listen(PORT, () => {
+    console.log(`servidor escuchando causa GAAAAA!! ${PORT}`);
 });
