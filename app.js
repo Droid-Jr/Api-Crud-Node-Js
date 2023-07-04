@@ -3,7 +3,7 @@ const Express = require("express");
 const todoList = require('./utils/database');
 
 const lista = require("./models/todos.model");
-const  cors = requiee('cors');
+const  cors = require('cors');
 
 const app = Express();
 require('dotenv').config();
