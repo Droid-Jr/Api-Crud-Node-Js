@@ -3,6 +3,7 @@ const Express = require("express");
 const todoList = require('./utils/database');
 
 const lista = require("./models/todos.model");
+const  cors = requiere('cors');
 
 const app = Express();
 require('dotenv').config();
@@ -21,6 +22,7 @@ todoList.sync()
 .then( () => console.log("base de datos sincronisada"))
 
 app.use(Express.json());
+app.use(cors());
 
 // * Crear TodoList
 app.post('/todos',async (req,res) => {
